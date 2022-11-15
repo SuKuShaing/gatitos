@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gatitos aleatorios</title>
+</head>
+<body>
+    <h1>Michis Apps</h1>
+    <h2>Michis Aleatorios</h2>
+    <span id="error"></span>
+    <section id="randomMichis">
+        <article>
+            <img id="img_gatito_1" alt="Foto de Gatito Aleatorio">
+            <button class="btn_guardar_gato" id="btn1">❤</button>
+        </article>
+        <article>
+            <img id="img_gatito_2" alt="Foto de Gatito Aleatorio">
+            <button class="btn_guardar_gato" id="btn2">❤</button>
+        </article>
+    </section>
+    <button class="btn_util" onclick="loadRandomMichis()">Otros Gatos</button>
+    <h2>Michis Favoritos</h2>
+    <section id="favoritesMichis">
+        <!-- <article> //estructura que creará el Js
+            <img id="img_gatito_1" alt="Foto de Gatito Aleatorio">
+            <button>Sacar de Favoritos</button>
+        </article> -->
+    </section>
+    <section id="uploadingGato">
+        <h2>Sube la foto de tu Gato</h2>
+        <form id="uploadingForm" action="">
+            <input type="file" id="fileUpload" name="file" onchange="previewImage()" />
+            <img id="imagePreview" alt="Image preview">
+            <button class="btn_util" type="button" onclick="uploadMichiPhoto()">Enviar Gato</button>
+        </form>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./main.js"></script>
+</html>
+
+<!-- 
+    GET Lee datos del server (Solo Lectura)
+    HEAD Recupera datos de los headers (Solo Lectura)
+    POST Envía datos al server
+    PUT  Edita un id completo
+    PATCH edita solo una parte de un id
+    DELETE Borra datos del server
+-->
