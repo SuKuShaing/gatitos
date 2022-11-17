@@ -78,9 +78,10 @@ async function loadFavoritesMichis() {
                 const article = document.createElement('article');
                 const img = document.createElement('img');
                 const btn = document.createElement('button');
-                const btnText = document.createTextNode('Sacar al michi de favoritos');
+                const btnText = document.createTextNode('✖');
                 
-                img.src = objGato.image.url
+                btn.className = 'btn_eliminar';
+                img.src = objGato.image.url;
                 // img.width = 150; // forma para agregar la propiedad a width que estará en el html limitando el tamaño de la imagen
                 btn.appendChild(btnText);
                 btn.onclick = () => deleteFavouriteMiche(objGato.id);

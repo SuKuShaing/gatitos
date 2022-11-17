@@ -63,7 +63,27 @@ img {
     font-size:large;
 }
 
-.btn_util {
+.btn_eliminar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    margin: 1rem;
+    color: rgb(66, 66, 66);
+    padding: .5rem .5rem;
+    border-radius: 50%;
+    border: 1px solid rgb(29, 29, 29);
+    background-color: rgb(218, 218, 218);
+    font-size: medium;
+    transition: 0.2s;
+}
+
+.btn_eliminar:hover {
+    border: 2px solid rgb(29, 29, 29);
+    padding: 1.2rem 1.2rem;
+    font-size:large;
+}
+
+.btn_gris {
     margin: 1.5rem;
     border-radius: 2rem;
     border-width: 1px;
@@ -74,7 +94,13 @@ img {
     border: 1px solid rgb(0, 0, 0);
 }
 
-.btn_util:hover {
+#uploadingGato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn_gris:hover {
     margin: 1.5rem;
     border-radius: 2rem;
     border-width: 1px;
@@ -82,4 +108,62 @@ img {
     font-size: medium;
     padding: 1rem 3rem;
     border: 2px solid rgb(0, 0, 0);
+}
+
+.etiquetaSubirArchivo {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.etiquetaSubirArchivo:hover {
+    background: #eee;
+    border-color: #111;
+}
+
+.etiquetaSubirArchivo:hover .subir-title {
+    color: #222;
+}
+
+.subir-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
 }
